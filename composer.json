@@ -1,7 +1,8 @@
 {
-    "name": "syx/app-skeleton",
-    "license": "proprietary",
+    "name": "filos/symfony-app-skeleton",
+    "license": "MIT",
     "type": "project",
+    "homepage": "https://github.com/perajovic/symfony-app-skeleton",
     "description": "Skeleton for creating a brand new Symfony app",
     "authors": [
         {
