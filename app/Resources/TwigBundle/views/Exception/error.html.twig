@@ -1,0 +1,5 @@
+{% extends 'TwigBundle::error_layout.html.twig' %}
+
+{% block body %}
+{{ 'default_error_msg'|trans({'%status_code%': status_code, '%status_text%': status_text}) }}
+{% endblock %}

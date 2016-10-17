@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>An Error Occurred: {{ status_text }}</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:500,600,700">
+        <style type="text/css">
+            body {
+                background-color: #f9f9f9;
+            }
+            a {
+                color: #2a8de7;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            a:hover,
+            a:focus {
+                color: #1466b1;
+                text-decoration: underline;
+            }
+            .frame-error {
+                width: 600px;
+                padding: 30px 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                line-height: 1.7;
+                background-color: #fff;
+                font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                color: #d9534f;
+                text-align: center;
+                border: 1px solid #e1e5ec;
+                border-radius: 2px;
+                -webkit-transform: translate(-50%,-50%);
+                   -moz-transform: translate(-50%,-50%);
+                        transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="frame-error">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

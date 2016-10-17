@@ -1,0 +1,3 @@
+services:
+    controller.health_check:
+        class: 'AppBundle\Controller\HealthCheckController'

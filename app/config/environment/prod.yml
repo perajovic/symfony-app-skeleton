@@ -1,0 +1,27 @@
+imports:
+    - { resource: 'common.yml' }
+    - { resource: '../parameters/prod.yml', ignore_errors: true }
+
+framework:
+    profiler:
+        enabled: false
+        collect: false
+
+twig:
+    debug: false
+    strict_variables: false
+
+doctrine:
+    orm:
+        auto_generate_proxy_classes: false
+        entity_managers:
+            app:
+                metadata_cache_driver:
+                    type: 'apcu'
+                query_cache_driver:
+                    type: 'apcu'
+
+monolog:
+    handlers:
+        main:
+            level: 'info'

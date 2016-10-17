@@ -1,0 +1,68 @@
+imports:
+    - { resource: '../parameters/common.yml' }
+    - { resource: '../service/init.yml' }
+
+parameters:
+    locale: 'en'
+
+filos_framework:
+    app:
+        no_cache: true
+        response_status: 200
+
+framework:
+    secret: '%secret%'
+    http_method_override: false
+    test: false
+    default_locale: '%locale%'
+    form:
+        enabled: false
+    profiler:
+        enabled: true
+        collect: true
+    translator:
+        enabled: true
+        fallback: '%locale%'
+    router:
+        resource: '%kernel.root_dir%/config/routing/%kernel.environment%.yml'
+    session:
+        name: '%session_name%'
+        cookie_lifetime: 1209600 # 14 days
+    assets:
+        enabled: false
+    templating:
+        engines:
+            - 'twig'
+
+twig:
+    debug: true
+    strict_variables: true
+    exception_controller: 'filos_framework.controller.exception:showAction'
+
+doctrine:
+    dbal:
+        default_connection: 'app'
+        dbname: '%database_name%'
+        host: '%database_host%'
+        port: '%database_port%'
+        user: '%database_user%'
+        password: '%database_password%'
+        charset: 'UTF8'
+        driver: 'pdo_pgsql'
+    orm:
+        auto_generate_proxy_classes: true
+        entity_managers:
+            app:
+                connection: 'app'
+                auto_mapping: true
+
+doctrine_migrations:
+    dir_name: '%kernel.root_dir%/Migrations'
+    namespace: 'Migrations'
+
+monolog:
+    handlers:
+        main:
+            type: 'stream'
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            level: 'debug'

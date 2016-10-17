@@ -1,0 +1,7 @@
+imports:
+    - { resource: 'common.yml' }
+    - { resource: '../parameters/dev.yml', ignore_errors: true }
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false

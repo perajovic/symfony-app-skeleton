@@ -1,0 +1,5 @@
+health_check:
+    path: '/health-check'
+    defaults:
+        _controller: 'controller.health_check:indexAction'
+        _format: 'json'

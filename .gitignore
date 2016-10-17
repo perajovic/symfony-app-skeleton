@@ -1,0 +1,10 @@
+/app/config/parameters/*
+!/app/config/parameters/.gitkeep
+/node_modules
+/var/*
+!/var/.gitkeep
+/vendor/
+/web/build/*
+!/web/build/.gitkeep
+/web/bundles/
+/phpunit.xml

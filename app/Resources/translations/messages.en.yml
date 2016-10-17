@@ -1,0 +1,1 @@
+default_error_msg: 'Whoops, something went wrong! (%status_code% %status_text%)'

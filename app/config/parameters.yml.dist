@@ -1,0 +1,13 @@
+parameters:
+    # Database
+    database_host: '127.0.0.1'
+    database_port: 5432
+    database_user: 'app-skeleton'
+    database_password: ~
+    database_name: 'app-skeleton'
+
+    # Symfony
+    default_url_scheme: 'http'
+    secret: 'T604Rgeazo89g5ZinAHV5b2zgAl25CTNuSxAOb2vP5g7fh'
+    router.request_context.host: '127.0.0.1:8000'
+    session_name: 'app-skeleton'
