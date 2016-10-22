@@ -8,7 +8,6 @@ parameters:
 filos_framework:
     app:
         no_cache: true
-        response_status: 200
 
 framework:
     secret: '%secret%'
